@@ -63,7 +63,7 @@ def save_wav(file_name, audio):
     # use the floating point -1.0 to 1.0 data directly in a WAV file but not
     # obvious how to do that using the wave module in python.
     for sample in audio:
-        print(sample)
+        print("Sample:", type(sample), sample)
         wav_file.writeframes(sample)
 
     wav_file.close()
@@ -76,6 +76,6 @@ fr = OpenWAV(path, 'r')
 data = fr.readframes(100)
 print(fr.getparams())
 save_path = 'E:/Github Codes and Projects/Projects/MediaTor-Project/MediaFiles/TestAudio2.wav'
-#WriteBytesToWAV(save_path, data, 100)
-save_wav(save_path, data)
+WriteBytesToWAV(save_path, data, 100)
+# save_wav(save_path, data)
 fr.close()
