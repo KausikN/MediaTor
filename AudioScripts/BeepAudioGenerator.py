@@ -95,7 +95,7 @@ def PianoKeyFreqMap():
 def GetKeyFreq(KeyNo):
     return 2 ** ((KeyNo - 49) / 12) * 440
 
-def PlayPiano():
+def PlayPianoSounds():
     duration = 1000
     Keys, KeyFreqs = PianoKeyFreqMap()
     for key in Keys:
@@ -115,5 +115,3 @@ def PlayPiano():
 # print("Audio Seq:")
 # print(Seq)
 # LoopBeepSequence(Seq)
-
-PlayPiano()
